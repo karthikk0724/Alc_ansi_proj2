@@ -1,0 +1,11 @@
+---
+- name: demonstarte lineinfile --example4 - insert line before the pattern match.
+  hosts: localhost
+  become: true
+  tasks:
+  - name: insert the line after match
+    lineinfile:
+      path: /home/ansible/playbooks/names.txt
+      line: "mahesh"
+      insertbefore: ^likhitha
+...

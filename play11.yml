@@ -1,0 +1,15 @@
+---
+- name: demonstarte lineinfile --example2
+  hosts: localhost
+  become: true
+  tasks:
+  - name: replace the line
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: ^permitRootLogin
+      line: "permitRootLogin = no"
+  - name: restart the sshd service
+    service:
+      name: sshd
+      state: restarted
+...

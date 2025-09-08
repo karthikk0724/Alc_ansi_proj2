@@ -1,0 +1,14 @@
+---
+- name: demonstarte lineinfile --example2
+  hosts: localhost
+  become: true
+  tasks:
+  - name: create a file and add the line
+    lineinfile:
+      path: /home/ansible/statements.txt
+      line: "ashish and jaya re speaking and sowjanya is listening to it"
+      state: present
+      create: true
+      owner: ansible
+      group: ansible
+...
