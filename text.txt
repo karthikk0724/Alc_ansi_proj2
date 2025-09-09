@@ -1,0 +1,17 @@
+
+
+Using an ad-hoc command, create a directory /opt/ansible_test with permissions 0755 on all servers.
+
+2. Run an ad-hoc command to install the latest version of httpd package on all web servers.
+
+3.Use an ad-hoc command to restart the sshd service on all servers and verify its status.
+
+4.Execute an ad-hoc command to add a new user deploy with a home directory on all hosts.
+
+5.Run an ad-hoc command to open port 8080 permanently using the firewalld module.
+
+6.Create a static inventory file that defines two groups: web and db. Assign different variables to each group (like http_port for web and db_port for db). Write a playbook that prints these variables using the debug module.
+
+7.Create a host variable file (host_vars/hostname.yml) to define the ansible_user and ansible_password. Write a playbook to display these variables using debug.
+
+
