@@ -1,0 +1,14 @@
+---
+- name: To check the firewalld service is enabled and started
+  hosts: localhost
+  become: true
+  vars_files:
+   - group_vars/all.yml
+
+  tasks:
+   - name: To check the status of the firewalld
+     ansible.builtin.service:
+      name: "{{service}}"
+      state: started
+      enabled: yes
+...

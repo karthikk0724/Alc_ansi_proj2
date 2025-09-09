@@ -1,0 +1,13 @@
+---
+- name: To install a package in localhost
+  hosts: localhost
+  become: true
+  vars_files:
+   - vars/package.yml
+  
+  tasks:
+   - name: To install {{ installable_package }} to our localhost
+     ansible.builtin.yum:
+      name: "{{installable_package}}"
+      state: present
+...
